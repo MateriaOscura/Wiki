@@ -1,0 +1,21 @@
+name: deploy-github-page
+
+on: push
+jobs:
+  quality-assurance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: install-dependencies
+        run: npm install
+      - name: run-linter
+        run: npm run lint
+      # - name: tests
+      - name: build
+        run: npm run build
+      # - if () => deploy
