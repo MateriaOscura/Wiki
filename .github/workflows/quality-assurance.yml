@@ -1,6 +1,6 @@
-name: qa
+name: quality-assurance
 
-on: 
+on:
   pull_request:
     types: [published, created, edited]
 jobs:
