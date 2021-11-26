@@ -1,7 +1,8 @@
 name: deploy-github-page
 
-on: pull_request
-jobs:
+on:
+  pull_request:
+    branches: [main]jobs:
   quality-assurance:
     runs-on: ubuntu-latest
     steps:
@@ -25,10 +26,9 @@ jobs:
       - name: build
         run: npm run build
       
-on: push
-  branch:
-    main
-jobs:
+on:
+  merge:
+    branches: [main]jobs:
   deploy-wiki:
     runs-on: ubuntu-latest
     steps:
