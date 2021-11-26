@@ -1,11 +1,10 @@
-name: deploy-github-page
+name: quality-assurance
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
+    types: [published, created, edited]
 jobs:
-  deploy-wiki:
+  quality-assurance:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -27,5 +26,3 @@ jobs:
 
       - name: build
         run: npm run build
-      
-      #- name: github-pages-deploy
