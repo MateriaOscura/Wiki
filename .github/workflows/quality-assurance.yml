@@ -1,11 +1,8 @@
-name: deploy-github-page
+name: qa
 
-on:
-  push:
-    branches:
-      - main
+on: pull_request
 jobs:
-  deploy-wiki:
+  quality-assurance:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -27,5 +24,3 @@ jobs:
 
       - name: build
         run: npm run build
-      
-      #- name: github-pages-deploy
