@@ -7,15 +7,20 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
+
       - name: node
         uses: actions/setup-node@v2
         with:
           node-version: '14'
+
       - name: install-dependencies
         run: npm install
+
       - name: run-linter
         run: npm run lint
-      # - name: tests
+
       - name: build
+        if: ${{ env.GITHUB_REF_NAME == 'config-github-actions' }}
         run: npm run build
-      # - if () => deploy
+      
+      #- name: github-pages-deploy
