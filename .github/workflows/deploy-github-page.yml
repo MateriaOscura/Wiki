@@ -20,10 +20,9 @@ jobs:
       #   run: npm run lint
 
       - name: print-variables
-        run: >
-          echo ${{ env.GITHUB_REF }}
-          echo ${{ env.GITHUB_REF_NAME }}
-          echo ${{ env.GITHUB_REF_TYPE }}
+        run: echo ${{ env.GITHUB_REF }}
+          # echo ${{ env.GITHUB_REF_NAME }}
+          # echo ${{ env.GITHUB_REF_TYPE }}
 
       - name: build
         if: ${{ env.GITHUB_REF_NAME == 'feat/config-github-actions' }}
