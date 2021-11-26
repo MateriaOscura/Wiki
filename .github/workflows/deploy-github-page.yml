@@ -20,7 +20,7 @@ jobs:
         run: npm run lint
 
       - name: build
-        if: ${{ env.GITHUB_REF_NAME == 'feat/config-github-actions' }}
+        if: ${{ env.GITHUB_REF_NAME == 'origin/feat/config-github-actions' }}
         run: npm run build
       
       #- name: github-pages-deploy
