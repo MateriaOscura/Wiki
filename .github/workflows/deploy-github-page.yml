@@ -20,7 +20,10 @@ jobs:
       #   run: npm run lint
 
       - name: print-variables
-        run: echo ${{ env.GITHUB_REF }}
+        run: env
+        # run: 'echo ${{ env.GITHUB_REF }}'
+        # run: echo " Print a single environment variable (the commit SHA ) - ${{ github.sha }} "
+
           # echo ${{ env.GITHUB_REF_NAME }}
           # echo ${{ env.GITHUB_REF_TYPE }}
 
