@@ -1,6 +1,6 @@
 name: deploy-github-page
 
-on: [pull_request]
+on: pull_request
 jobs:
   quality-assurance:
     runs-on: ubuntu-latest
@@ -25,7 +25,7 @@ jobs:
       - name: build
         run: npm run build
       
-on: [push]
+on: push
   branch:
     main
 jobs:
