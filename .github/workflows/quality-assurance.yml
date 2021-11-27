@@ -2,7 +2,7 @@ name: quality-assurance
 
 on:
   pull_request:
-    types: [published, created, edited]
+    types: [ assigned, opened, synchronize, reopened ]
 jobs:
   quality-assurance:
     runs-on: ubuntu-latest
