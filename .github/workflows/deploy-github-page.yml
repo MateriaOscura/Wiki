@@ -1,4 +1,4 @@
-name: deploy-github-page
+name: deploy-wiki
 
 on:
   push:
@@ -21,9 +21,6 @@ jobs:
 
       - name: run-linter
         run: npm run lint
-
-      - name: print-variables
-        run: env
 
       - name: build
         run: npm run build
