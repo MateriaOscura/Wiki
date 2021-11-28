@@ -25,4 +25,9 @@ jobs:
       - name: build
         run: npm run build
       
-      #- name: github-pages-deploy
+      - name: deploy
+        if: success()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          publish_dir: ./dist
