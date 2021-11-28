@@ -10,6 +10,7 @@
     "lint-fix": "eslint src --fix"
   },
   "dependencies": {
+    "@gridsome/vue-remark": "^0.2.6",
     "gridsome": "^0.7.0"
   },
   "devDependencies": {

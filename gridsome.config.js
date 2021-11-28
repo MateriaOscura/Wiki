@@ -6,7 +6,17 @@
 
 module.exports = {
   siteName: 'Gridsome',
-  plugins: [],
+  plugins: [
+    {
+      use: '@gridsome/vue-remark',
+      options: {
+        typeName: 'Wiki', // Required
+        baseDir: './content/wiki', // Where .md files are located
+        pathPrefix: '/wiki', // Add route prefix. Optional
+        template: './src/templates/Wiki.vue', // Optional
+      },
+    },
+  ],
   siteUrl: 'https://materiaoscura.github.io',
   pathPrefix: '/wiki',
 };

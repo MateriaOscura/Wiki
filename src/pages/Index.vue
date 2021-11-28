@@ -7,7 +7,8 @@
     <h1>Hello, world!</h1>
 
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore
+      expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
     </p>
 
     <p class="home-links">
@@ -21,9 +22,9 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Hello, world!'
-  }
-}
+    title: 'Hello, world!',
+  },
+};
 </script>
 
 <style>
