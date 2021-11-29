@@ -3,7 +3,7 @@ const tailwindcss = require('tailwindcss');
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'DarkMatter',
   siteUrl: 'https://materiaoscura.github.io',
   pathPrefix: '/wiki',
   plugins: [
@@ -13,7 +13,13 @@ module.exports = {
         typeName: 'WikiEntry', // Required
         baseDir: './content/wiki', // Where .md files are located
         pathPrefix: '/wiki', // Add route prefix. Optional
-        template: './src/templates/WikiEntry.vue' // Optional
+        template: './src/templates/WikiEntry.vue', // Optional
+        plugins: [
+          [
+            'gridsome-plugin-remark-shiki',
+            { theme: 'nord', skipInline: true }
+          ]
+        ]
       },
     },
     {
@@ -28,7 +34,19 @@ module.exports = {
             'gridsome-plugin-remark-shiki',
             { theme: 'nord', skipInline: true }
           ]
-        ]
+        ],
+        refs: {
+          tags: 'Tag'
+        }
+      }
+    },
+    {
+      use: '@gridsome/vue-remark',
+      options: {
+        typeName: 'Tag', // Required
+        baseDir: './content/tags', // Where .md files are located
+        pathPrefix: '/blog/tags', // Add route prefix. Optional
+        template: './src/templates/Tag.vue', // Optional
       }
     }
   ],
