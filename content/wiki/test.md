@@ -1,7 +1,6 @@
 ---
 title: Welcome to my wiki
 excerpt: A ver qué pasa
-type: chao
 ---
 
 Hola wiki, asdasdas asdasdlkm 

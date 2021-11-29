@@ -3,7 +3,7 @@
     <h1>Bienvenido a la Wiki</h1>
     <div class="entries">
       <div
-        v-for="edge in $page.wiki.edges"
+        v-for="edge in $page.wikiEntry.edges"
         :set="currentPage = edge.node"
         :key="edge.node.id"
         class="entry"
@@ -16,15 +16,15 @@
 
 <!-- Front-matter fields can be queried from GraphQL layer -->
 <page-query>
-query Wiki {
-  wiki: allWiki {
+query WikiEntry {
+  wikiEntry: allWikiEntry {
     edges {
       node {
         id
         title
-        type
         path
       }
     }
   }
-}</page-query>
+}
+</page-query>

@@ -1,6 +1,5 @@
 ---
 title: instrucciones
-type: hola
 ---
 # Hola
 

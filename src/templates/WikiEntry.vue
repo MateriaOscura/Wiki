@@ -1,15 +1,15 @@
 <template>
   <Layout>
-    <h1>{{ $page.wiki.title }}</h1>
-    <p class="intro">{{ $page.wiki.excerpt }}</p>
+    <h1>{{ $page.wikiEntry.title }}</h1>
+    <p class="intro">{{ $page.wikiEntry.excerpt }}</p>
     <VueRemarkContent />
   </Layout>
 </template>
 
 <!-- Front-matter fields can be queried from GraphQL layer -->
 <page-query>
-query Wiki ($id: ID!) {
-  wiki(id: $id) {
+query WikiEntry ($id: ID!) {
+  wikiEntry(id: $id) {
     title
   }
 }

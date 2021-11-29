@@ -10,10 +10,10 @@ module.exports = {
     {
       use: '@gridsome/vue-remark',
       options: {
-        typeName: 'Wiki', // Required
+        typeName: 'WikiEntry', // Required
         baseDir: './content/wiki', // Where .md files are located
         pathPrefix: '/wiki', // Add route prefix. Optional
-        template: './src/templates/Wiki.vue', // Optional
+        template: './src/templates/WikiEntry.vue', // Optional
       },
     },
   ],
