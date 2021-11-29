@@ -1,3 +1,5 @@
+const typos = require('@tailwindcss/typography');
+
 module.exports = {
   purge: {
     content: [
@@ -16,5 +18,7 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    typos,
+  ],
 };

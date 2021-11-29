@@ -1,15 +1,11 @@
-// This is where project configuration and plugin options are located.
-// Learn more: https://gridsome.org/docs/config
-
-// Changes here require a server restart.
-// To restart press CTRL + C in terminal and run `gridsome develop`
-
 // Tailwind
 const tailwindcss = require('tailwindcss');
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
   siteName: 'Gridsome',
+  siteUrl: 'https://materiaoscura.github.io',
+  pathPrefix: '/wiki',
   plugins: [
     {
       use: '@gridsome/vue-remark',
@@ -27,11 +23,15 @@ module.exports = {
         baseDir: './content/blog', // Where .md files are located
         pathPrefix: '/blog', // Add route prefix. Optional
         template: './src/templates/BlogEntry.vue', // Optional
+        plugins: [
+          [
+            'gridsome-plugin-remark-shiki',
+            { theme: 'nord', skipInline: true },
+          ],
+        ],
       },
     },
   ],
-  siteUrl: 'https://materiaoscura.github.io',
-  pathPrefix: '/wiki',
   css: {
     loaderOptions: {
       postcss: {
