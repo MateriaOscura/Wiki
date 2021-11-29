@@ -16,6 +16,15 @@ module.exports = {
         template: './src/templates/WikiEntry.vue', // Optional
       },
     },
+    {
+      use: '@gridsome/vue-remark',
+      options: {
+        typeName: 'BlogEntry', // Required
+        baseDir: './content/blog', // Where .md files are located
+        pathPrefix: '/blog', // Add route prefix. Optional
+        template: './src/templates/BlogEntry.vue', // Optional
+      },
+    },
   ],
   siteUrl: 'https://materiaoscura.github.io',
   pathPrefix: '/wiki',
