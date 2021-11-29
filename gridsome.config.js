@@ -32,7 +32,10 @@ module.exports = {
         plugins: [
           [
             'gridsome-plugin-remark-shiki',
-            { theme: 'nord', skipInline: true }
+            {
+              theme: 'nord',
+              skipInline: true
+            }
           ]
         ],
         refs: {
