@@ -5,13 +5,21 @@
         <g-link to="/">{{ $static.metadata.siteName }}</g-link>
       </strong>
       <nav class="nav">
-        <g-link class="ml-6" to="/">Home</g-link>
-        <g-link class="ml-6" to="/wiki">Wiki</g-link>
-        <g-link class="ml-6" to="/blog">Blog</g-link>
-        <g-link class="ml-6" to="/about/">About</g-link>
+        <g-link class="ml-6" to="/">
+          Home
+        </g-link>
+        <g-link class="ml-6" to="/wiki">
+          Wiki
+        </g-link>
+        <g-link class="ml-6" to="/blog">
+          Blog
+        </g-link>
+        <g-link class="ml-6" to="/about/">
+          About
+        </g-link>
       </nav>
     </header>
-    <slot/>
+    <slot />
   </div>
 </template>
 

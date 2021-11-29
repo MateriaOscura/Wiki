@@ -6,7 +6,7 @@
     "deploy": "gh-pages -d dist",
     "develop": "gridsome develop",
     "explore": "gridsome explore",
-    "lint": "eslint src --ext .js,.vue --no-fix",
+    "lint": "eslint ./ --ext .js,.vue --no-fix --debug",
     "lint:fix": "eslint src --ext .js,.vue --fix"
   },
   "dependencies": {

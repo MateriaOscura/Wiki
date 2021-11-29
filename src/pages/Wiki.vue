@@ -1,14 +1,18 @@
 <template>
   <Layout>
-    <h1 class="text-xl font-semibold mb-5">Bienvenido a la Wiki</h1>
+    <h1 class="text-xl font-semibold mb-5">
+      Bienvenido a la Wiki
+    </h1>
     <ul class="list-outside list-disc">
       <li
         v-for="edge in $page.wikiEntry.edges"
-        :set="currentPage = edge.node"
         :key="edge.node.id"
+        :set="currentPage = edge.node"
         class="mt-3"
       >
-        <g-link :to="currentPage.path">{{ currentPage.title }}</g-link>
+        <g-link :to="currentPage.path">
+          {{ currentPage.title }}
+        </g-link>
       </li>
     </ul>
   </Layout>

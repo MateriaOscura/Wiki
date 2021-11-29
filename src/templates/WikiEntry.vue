@@ -1,7 +1,9 @@
 <template>
   <Layout>
     <h1>{{ $page.wikiEntry.title }}</h1>
-    <p class="intro">{{ $page.wikiEntry.excerpt }}</p>
+    <p class="intro">
+      {{ $page.wikiEntry.excerpt }}
+    </p>
     <VueRemarkContent />
   </Layout>
 </template>

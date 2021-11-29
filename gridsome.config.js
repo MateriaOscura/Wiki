@@ -13,7 +13,7 @@ module.exports = {
         typeName: 'WikiEntry', // Required
         baseDir: './content/wiki', // Where .md files are located
         pathPrefix: '/wiki', // Add route prefix. Optional
-        template: './src/templates/WikiEntry.vue', // Optional
+        template: './src/templates/WikiEntry.vue' // Optional
       },
     },
     {
@@ -26,20 +26,20 @@ module.exports = {
         plugins: [
           [
             'gridsome-plugin-remark-shiki',
-            { theme: 'nord', skipInline: true },
-          ],
-        ],
-      },
-    },
+            { theme: 'nord', skipInline: true }
+          ]
+        ]
+      }
+    }
   ],
   css: {
     loaderOptions: {
       postcss: {
         plugins: [
           tailwindcss,
-          autoprefixer,
-        ],
-      },
-    },
-  },
+          autoprefixer
+        ]
+      }
+    }
+  }
 };
