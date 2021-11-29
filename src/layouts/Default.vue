@@ -1,15 +1,30 @@
 <template>
-  <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
-      </nav>
-    </header>
-    <slot/>
+  <div
+    class="min-h-screen flex flex-col bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 transition-colors delay-100 ease-linear"
+  >
+    <div class="container max-w-screen-md mx-auto px-5">
+      <header class="flex justify-between items-center mt-8 mb-12">
+        <strong>
+          <g-link to="/">{{ $static.metadata.siteName }}</g-link>
+        </strong>
+        <nav class="flex">
+          <theme-switcher />
+          <g-link class="ml-6" to="/">
+            Home
+          </g-link>
+          <g-link class="ml-6" to="/wiki">
+            Wiki
+          </g-link>
+          <g-link class="ml-6" to="/blog">
+            Blog
+          </g-link>
+          <g-link class="ml-6" to="/about/">
+            About
+          </g-link>
+        </nav>
+      </header>
+      <slot />
+    </div>
   </div>
 </template>
 
@@ -21,30 +36,14 @@ query {
 }
 </static-query>
 
-<style>
-body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
-  line-height: 1.5;
-}
+<script>
+// import the theme-switcher here
+import ThemeSwitcher from '../components/ThemeSwitcher.vue';
 
-.layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
-
-.nav__link {
-  margin-left: 20px;
-}
-</style>
+// reguster theme-swticher under components
+export default {
+  components: {
+    ThemeSwitcher
+  }
+};
+</script>

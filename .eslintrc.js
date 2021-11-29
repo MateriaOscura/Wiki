@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    'plugin:vue/essential',
+    'plugin:vue/recommended',
     'airbnb-base',
   ],
   parserOptions: {
@@ -15,6 +15,26 @@ module.exports = {
     'vue',
   ],
   rules: {
-    "vue/multi-word-component-names": 0
-  },
+    'vue/multi-word-component-names': 'off',
+    'max-len': 'off',
+    'vue/max-len': [
+      'error',
+      {
+        code: 120,
+        template: 9000,
+        ignoreTemplateLiterals: true,
+        ignoreUrls: true,
+        ignoreStrings: true
+      },
+    ],
+    'comma-dangle': 'off',
+    'vue/max-attributes-per-line': ['error', {
+      singleline: {
+        max: 4
+      },
+      multiline: {
+        max: 1
+      }
+    }]
+  }
 };
