@@ -6,8 +6,8 @@
     "deploy": "gh-pages -d dist",
     "develop": "gridsome develop",
     "explore": "gridsome explore",
-    "lint": "eslint src --no-fix",
-    "lint-fix": "eslint src --fix"
+    "lint": "eslint src --ext .js,.vue --no-fix",
+    "lint:fix": "eslint src --ext .js,.vue --fix"
   },
   "dependencies": {
     "@gridsome/vue-remark": "^0.2.6",

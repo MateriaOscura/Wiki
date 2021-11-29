@@ -4,7 +4,8 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    'plugin:vue/essential',
+    'plugin:vue/recommended',
+    'standard',
     'airbnb-base',
   ],
   parserOptions: {
@@ -15,6 +16,6 @@ module.exports = {
     'vue',
   ],
   rules: {
-    "vue/multi-word-component-names": 0
+    'vue/multi-word-component-names': 0,
   },
 };
