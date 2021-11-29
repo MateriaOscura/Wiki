@@ -4,6 +4,10 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+// Tailwind
+const tailwindcss = require('tailwindcss');
+const autoprefixer = require('autoprefixer');
+
 module.exports = {
   siteName: 'Gridsome',
   plugins: [
@@ -28,4 +32,14 @@ module.exports = {
   ],
   siteUrl: 'https://materiaoscura.github.io',
   pathPrefix: '/wiki',
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: [
+          tailwindcss,
+          autoprefixer,
+        ],
+      },
+    },
+  },
 };

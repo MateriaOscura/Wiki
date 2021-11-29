@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <h1>{{ $page.blogEntry.title }}</h1>
-    <p class="intro">{{ $page.blogEntry.excerpt }}</p>
+    <p class="date">{{ $page.blogEntry.date }}</p>
     <VueRemarkContent />
   </Layout>
 </template>
@@ -11,6 +11,7 @@
 query BlogEntry ($id: ID!) {
   blogEntry(id: $id) {
     title
+    date
   }
 }
 </page-query>

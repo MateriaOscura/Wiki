@@ -3,6 +3,9 @@
 
 import DefaultLayout from './layouts/Default.vue';
 
+// Tailwind
+import './css/main.css';
+
 /* eslint-disable no-unused-vars */
 const run = (Vue, { router, head, isClient }) => {
   // Set default layout as a global component

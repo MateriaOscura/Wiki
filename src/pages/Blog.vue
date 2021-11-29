@@ -1,16 +1,16 @@
 <template>
   <Layout>
-    <h1>Bienvenido al blog!</h1>
-    <div class="entries">
-      <div
+    <h1 class="text-xl font-semibold mb-5">Bienvenido al blog!</h1>
+    <ul class="list-outside list-disc">
+      <li
         v-for="edge in $page.blogEntry.edges"
         :set="currentPage = edge.node"
         :key="edge.node.id"
-        class="entry"
+        class="mt-3"
       >
         <g-link :to="currentPage.path">{{ currentPage.title }}</g-link>
-      </div>
-    </div>
+      </li>
+    </ul>
   </Layout>
 </template>
 
