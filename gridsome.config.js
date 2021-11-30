@@ -15,10 +15,8 @@ module.exports = {
         pathPrefix: '/wiki', // Add route prefix. Optional
         template: './src/templates/WikiEntry.vue', // Optional
         plugins: [
-          [
-            'gridsome-plugin-remark-shiki',
-            { theme: 'nord', skipInline: true }
-          ]
+          '@gridsome/remark-prismjs',
+          { transformInlineCode: true, customClassPrefix: 'prism-' }
         ]
       },
     },
@@ -29,18 +27,13 @@ module.exports = {
         baseDir: './content/blog', // Where .md files are located
         pathPrefix: '/blog', // Add route prefix. Optional
         template: './src/templates/BlogEntry.vue', // Optional
-        plugins: [
-          [
-            'gridsome-plugin-remark-shiki',
-            {
-              theme: 'nord',
-              skipInline: true
-            }
-          ]
-        ],
         refs: {
           tags: 'Tag'
-        }
+        },
+        plugins: [
+          '@gridsome/remark-prismjs',
+          { transformInlineCode: true, customClassPrefix: 'prism-' }
+        ],
       }
     },
     {
@@ -50,6 +43,10 @@ module.exports = {
         baseDir: './content/tags', // Where .md files are located
         pathPrefix: '/blog/tags', // Add route prefix. Optional
         template: './src/templates/Tag.vue', // Optional
+        plugins: [
+          '@gridsome/remark-prismjs',
+          { transformInlineCode: true, customClassPrefix: 'prism-' }
+        ]
       }
     }
   ],
