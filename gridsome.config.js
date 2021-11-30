@@ -17,9 +17,9 @@ module.exports = {
         plugins: [
           [
             'gridsome-plugin-remark-shiki',
-            { theme: 'nord', skipInline: true }
-          ]
-        ]
+            { theme: 'nord', skipInline: true },
+          ],
+        ],
       },
     },
     {
@@ -29,18 +29,13 @@ module.exports = {
         baseDir: './content/blog', // Where .md files are located
         pathPrefix: '/blog', // Add route prefix. Optional
         template: './src/templates/BlogEntry.vue', // Optional
+        refs: { tags: 'Tag' },
         plugins: [
           [
             'gridsome-plugin-remark-shiki',
-            {
-              theme: 'nord',
-              skipInline: true
-            }
-          ]
+            { theme: 'nord', skipInline: true },
+          ],
         ],
-        refs: {
-          tags: 'Tag'
-        }
       }
     },
     {
@@ -50,6 +45,12 @@ module.exports = {
         baseDir: './content/tags', // Where .md files are located
         pathPrefix: '/blog/tags', // Add route prefix. Optional
         template: './src/templates/Tag.vue', // Optional
+        plugins: [
+          [
+            'gridsome-plugin-remark-shiki',
+            { theme: 'nord', skipInline: true },
+          ],
+        ],
       }
     }
   ],
