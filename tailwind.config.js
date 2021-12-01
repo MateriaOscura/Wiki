@@ -15,6 +15,12 @@ module.exports = {
   theme: {
     extend: {
       typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            'code::before': false,
+            'code::after': false
+          }
+        },
         light: {
           css: [
             {

@@ -17,7 +17,7 @@ module.exports = {
         plugins: [
           [
             'gridsome-plugin-remark-shiki',
-            { theme: 'nord', skipInline: false },
+            { theme: 'nord', skipInline: true },
           ],
         ],
       },
@@ -59,7 +59,6 @@ module.exports = {
       postcss: {
         plugins: [
           tailwindcss,
-          autoprefixer
         ]
       }
     }
