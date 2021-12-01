@@ -1,4 +1,4 @@
 ---
 title: Equipo
 ---
-# Aquí van las cosas del equiopi
+# Aquí van las cosas del equipo
