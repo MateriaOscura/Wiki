@@ -3,3 +3,12 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.prose code, :not(pre) > code {
+  background-color: rgba(126,157,189,.11);
+  border-radius: 5px;
+  font-size: 85%;
+  margin: 0;
+  padding: 0.2em 0.4em;
+  font-weight: normal;
+};
