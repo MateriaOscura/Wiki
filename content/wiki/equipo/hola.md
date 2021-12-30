@@ -51,19 +51,21 @@ Nota: el volumen y/o tamaño de las tareas a tomar por cada integrante deberían
 
 #### Calendario
 
-- **Día 0**: `planning`. Sábado en la mañana, semana por medio, se hace más factible para conseguir las 5 horas. Se puede combinar con un almuerzo
-- **Día 1**: `checkpoint #1` (0 de Fibonacci). Nos reunimos tarde, porque es Domingo, día del Señor.
+- **Día 0**: `planning` (0 de Fibonacci). 
+- **Día 1**: `checkpoint #1` (1 de Fibonacci). Nos reunimos tarde, porque es Domingo, día del Señor.
 - **Día 2**: `checkpoint #2` (1 de Fibonacci). 19-20 hrs
-- **Día 3**: `checkpoint #3` (1 de Fibonacci). 19-20 hrs
-- **Día 4**: trabajo personal
-- **Día 5**: `checkpoint #4` (2 de Fibonacci). 19-20 hrs
+- **Día 3**: trabajo personal
+- **Día 4**: `checkpoint #3` (2 de Fibonacci). 19-20 hrs
+- **Día 5**: trabajo personal
 - **Día 6**: trabajo personal
-- **Día 7**: trabajo personal
-- **Día 8**: `checkpoint #5` (3 de Fibonacci). 19-20 hrs
+- **Día 7**: `checkpoint #4` (3 de Fibonacci). 19-20 hrs
+- **Día 8**: trabajo personal
 - **Día 9**: trabajo personal
 - **Día 10**: trabajo personal
 - **Día 11**: trabajo personal
-- **Día 12**: trabajo personal
-- **Día 13**: `review-retro` (5 de Fibonacci). 18-21 hrs
+- **Día 12**: `checkpoint #5` (5 de Fibonacci). 19-20 hrs
+- **Día 13**: `review-retro`. 18-21 hrs
 
-Repite!
+Nota: se propone que el día 0 sea un sábado en la mañana, ya que  se hace más factible para conseguir las 5 horas y sería semana por medio. Se puede combinar con un almuerzo
+
+    Repite!
